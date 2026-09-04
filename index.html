@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tayabas Supermarket - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: #141414 !important;
+            box-shadow: 0 3px 15px rgba(0,0,0,.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 23px;
+        }
+
+        .navbar-brand img {
+            height: 60px;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 5px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #00ff88 !important;
+            background: rgba(0,255,136,.1);
+        }
+
+
+        /* HERO */
+
+        .hero {
+            height: 700px;
+            position: relative;
+            overflow: hidden;
+            background: url("videoframe_740.png") center/cover;
+        }
+
+        .hero-video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,.6);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+        }
+
+        .hero h1 span,
+        .hero h2 {
+            color: #00ff88;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        .shop-btn {
+            background: #00c96b;
+            color: white;
+            border: none;
+        }
+
+        .shop-btn:hover {
+            background: #00a85a;
+            color: white;
+        }
+
+        .contact-btn {
+            color: white;
+            border: 2px solid white;
+        }
+
+        .contact-btn:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* FEATURED PRODUCTS */
+
+        .featured-products {
+            background: #f5f7f9;
+        }
+
+        .section-title,
+        .why-us h2 {
+            color: #0b2d63;
+        }
+
+        #featuredProducts {
+            max-width: 800px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.2);
+        }
+
+        #featuredProducts img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            background: rgba(0,0,0,.7);
+        }
+
+
+        /* WHY CHOOSE US */
+
+        .why-card {
+            box-shadow: 0 5px 25px rgba(0,0,0,.1);
+            transition: .3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .why-card img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border: 4px solid #00c96b;
+        }
+
+        .why-card h5 {
+            color: #0b2d63;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #151b20;
+            color: white;
+        }
+
+        footer h5 {
+            color: #00ff88;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #00ff88;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .hero {
+                height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            #featuredProducts img {
+                height: 350px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand d-flex align-items-center fw-bold text-white"
+           href="index.html">
+
+            <img src="logo.png"
+                 class="me-2 rounded"
+                 alt="Tayabas Supermarket">
+
+            Tayabas Supermarket
+
+        </a>
+
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active rounded-3 px-3"
+                       href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3"
+                       href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3"
+                       href="product.html">
+                        Product
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link rounded-3 px-3"
+                       href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <form class="d-flex mt-3 mt-lg-0">
+
+                <input class="form-control me-2 rounded"
+                       type="search"
+                       placeholder="Search">
+
+                <button class="btn btn-outline-success rounded"
+                        type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero d-flex align-items-center">
+
+    <video class="hero-video w-100 h-100"
+           autoplay
+           muted
+           loop
+           playsinline
+           poster="videoframe_740.png">
+
+        <source src="videoframe_740.mp4" type="video/mp4">
+
+    </video>
+
+
+    <div class="container px-4 py-5">
+
+        <div class="w-75">
+
+            <h1 class="fw-bold text-white mb-4">
+
+                Welcome to
+                <span>Tayabas Supermarket</span>
+
+            </h1>
+
+
+            <p class="text-white mb-4">
+
+                Your local supermarket in Tayabas City!
+                Fresh products, affordable prices, and quality goods
+                for every family.
+
+            </p>
+
+
+            <h2 class="fw-bold mb-3">
+
+                Welcome, Tayabasin! 🛒
+
+            </h2>
+
+
+            <p class="text-white">
+
+                We are happy to serve you and your family.
+                Shop for fresh food and everyday essentials.
+
+            </p>
+
+
+            <div class="mt-3">
+
+                <a href="product.html"
+                   class="btn shop-btn rounded-pill px-4 py-3 me-2">
+
+                    🛒 Shop Now
+
+                </a>
+
+
+                <a href="contact.html"
+                   class="btn contact-btn rounded-pill px-4 py-3">
+
+                    📞 Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FEATURED PRODUCTS -->
+
+<section class="featured-products py-5 px-4">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold section-title mt-3">
+
+            Featured Products
+
+        </h2>
+
+
+        <p class="text-center text-muted mb-4">
+
+            Fresh, affordable, and ready for your family.
+
+        </p>
+
+
+        <div id="featuredProducts"
+             class="carousel slide mx-auto rounded-3"
+             data-bs-ride="carousel">
+
+
+            <div class="carousel-indicators">
+
+                <button type="button"
+                        data-bs-target="#featuredProducts"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1">
+                </button>
+
+                <button type="button"
+                        data-bs-target="#featuredProducts"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2">
+                </button>
+
+                <button type="button"
+                        data-bs-target="#featuredProducts"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3">
+                </button>
+
+            </div>
+
+
+            <div class="carousel-inner">
+
+
+                <!-- RICE -->
+
+                <div class="carousel-item active">
+
+                    <img src="rice.jpg"
+                         class="d-block w-100"
+                         alt="Premium Rice">
+
+                    <div class="carousel-caption p-3 rounded">
+
+                        <h5 class="fw-bold">
+                            🌾 Premium Rice
+                        </h5>
+
+                        <p>
+                            Quality rice for your family.
+                        </p>
+
+                        <strong>
+                            ₱55.00 / kg
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MILK -->
+
+                <div class="carousel-item">
+
+                    <img src="milk.jpg"
+                         class="d-block w-100"
+                         alt="Fresh Milk">
+
+                    <div class="carousel-caption p-3 rounded">
+
+                        <h5 class="fw-bold">
+                            🥛 Fresh Milk
+                        </h5>
+
+                        <p>
+                            Fresh and delicious milk.
+                        </p>
+
+                        <strong>
+                            ₱85.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VEGETABLES -->
+
+                <div class="carousel-item">
+
+                    <img src="vegetables.jpg"
+                         class="d-block w-100"
+                         alt="Fresh Vegetables">
+
+                    <div class="carousel-caption p-3 rounded">
+
+                        <h5 class="fw-bold">
+                            🥬 Fresh Vegetables
+                        </h5>
+
+                        <p>
+                            Fresh and healthy vegetables.
+                        </p>
+
+                        <strong>
+                            ₱100.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#featuredProducts"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#featuredProducts"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-us py-5 px-4 bg-white">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold mt-3">
+
+            Why Choose Us?
+
+        </h2>
+
+
+        <p class="text-center text-muted mb-4">
+
+            Quality products, affordable prices, and friendly service.
+
+        </p>
+
+
+        <div class="row text-center my-5">
+
+
+            <!-- QUALITY -->
+
+            <div class="col-md-4 mb-4">
+
+                <div class="why-card bg-light p-4 rounded-3 h-100">
+
+                    <img src="supermarketlogo.jpg"
+                         class="rounded-pill mb-3"
+                         alt="Quality Products">
+
+                    <h5 class="fw-bold">
+
+                        Quality Products
+
+                    </h5>
+
+                    <p>
+
+                        Fresh and quality products
+                        for your everyday needs.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AFFORDABLE -->
+
+            <div class="col-md-4 mb-4">
+
+                <div class="why-card bg-light p-4 rounded-3 h-100">
+
+                    <img src="affordable.jpg"
+                         class="rounded-pill mb-3"
+                         alt="Affordable Prices">
+
+                    <h5 class="fw-bold">
+
+                        Affordable Prices
+
+                    </h5>
+
+                    <p>
+
+                        Get the products you need
+                        at affordable prices.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FRIENDLY -->
+
+            <div class="col-md-4 mb-4">
+
+                <div class="why-card bg-light p-4 rounded-3 h-100">
+
+                    <img src="friendly.jpg"
+                         class="rounded-pill mb-3"
+                         alt="Friendly Service">
+
+                    <h5 class="fw-bold">
+
+                        Friendly Service
+
+                    </h5>
+
+                    <p>
+
+                        Our friendly staff are always
+                        ready to help.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="bg-dark text-white py-5 px-4">
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <!-- ABOUT -->
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="fw-bold mb-3">
+
+                    Tayabas Supermarket
+
+                </h5>
+
+                <p>
+
+                    Your trusted supermarket in Tayabas City.
+
+                </p>
+
+                <p>
+
+                    Fresh products, affordable prices,
+                    and quality service.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="fw-bold mb-3">
+
+                    Quick Links
+
+                </h5>
+
+                <p>
+                    <a href="index.html">Home</a>
+                </p>
+
+                <p>
+                    <a href="about.html">About</a>
+                </p>
+
+                <p>
+                    <a href="product.html">Products</a>
+                </p>
+
+                <p>
+                    <a href="contact.html">Contact</a>
+                </p>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="fw-bold mb-3">
+
+                    Contact Us
+
+                </h5>
+
+                <p>
+                    📍 Tayabas City, Quezon
+                </p>
+
+                <p>
+                    📞 0912-345-6789
+                </p>
+
+                <p>
+                    📧 tayabassupermarket@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright text-center mt-3 pt-3">
+
+            © 2026 Tayabas Supermarket. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
